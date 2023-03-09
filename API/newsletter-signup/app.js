@@ -7,6 +7,7 @@ const { post } = require("request");
 const app = express();
 
 app.use(express.static("public"));
+
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.get("/", function(req, res) {
@@ -39,8 +40,6 @@ app.post("/", function(req, res) {
 
 	const request = https.request(url, options, function(response) {
 		response.on("data", function(data) {
-			console.log(JSON.parse(data));
-			console.log(response.statusCode);
 			if (response.statusCode === 200) {
 				res.sendFile(__dirname + "/success.html");
 			} else {
