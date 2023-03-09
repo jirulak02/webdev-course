@@ -38,8 +38,6 @@ app.post("/weather", function(req, res) {
 	});
 });
 
-
-
 app.listen(3000, function(error) {
 	if(!error)
 		console.log("Server is Successfully Running, and App is listening on port 3000");
