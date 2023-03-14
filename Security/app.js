@@ -49,7 +49,19 @@ app.get("/login", function(req, res) {
 });
 
 app.post("/login", function(req, res) {
+	const user = new User({
+		username: req.body.username,
+		password: req.body.password
+	});
 
+	req.login(user, function(err) {
+		if (err) {
+			console.log(err);
+		} else {
+			passport.authenticate("local", {failureRedirect: "/register"});
+			res.redirect("/secrets");
+		}
+	});
 });
 
 app.get("/register", function(req, res) {
