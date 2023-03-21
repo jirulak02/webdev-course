@@ -1,3 +1,3 @@
 # API
 
-![API notes](https://github.com/jirulak02/WebDev-course/tree/main/Resources/Notes/API.jpeg?raw=true)
+![API notes](https://github.com/jirulak02/WebDev-course/tree/main/Resources/Notes/API.png?raw=true)
