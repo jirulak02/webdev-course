@@ -54,6 +54,7 @@ app.get("/posts/:topic", function(req, res) {
 			res.render("post", {postTitle: post.title, postPar: post.content});
 		}
 	});
+
 	res.render("404");
 });
 
